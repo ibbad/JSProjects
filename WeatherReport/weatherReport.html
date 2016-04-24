@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Daily Quote</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="js/weatherReport.js"></script>
+</head>
+<body ng-app="Weather">
+    <div class="container" ng-controller="MainCtrl">
+        <div class="row">
+            <header class="col-xs-12 text-center">
+                <h1>Weather App</h1>
+            </header>
+
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="text-center status">
+                    <p>{{Data.city}}, {{Data.country}}</p>
+                    <p>
+                        {{Data.temp}} &#176;
+                        <span class="temp" ng-click="Data.sys()">
+                            {{Data.unit}}
+                        </span>
+                    </p>
+                    <p>{{Data.des}}</p>
+                </div>
+
+                <div class="text-center all-icon">
+                    <div class="icon sun-shower hider">
+                        <div class="cloud"></div>
+                        <div class="sun">
+                            <div class="rays"></div>
+                        </div>
+                        <div class="rain"></div>
+                    </div>
+                    <div class="icon thunder-storm hide thunderstorm">
+                        <div class="cloud"></div>
+                        <div class="lightning">
+                            <div class="bolt"></div>
+                            <div class="bolt"></div>
+                        </div>
+                    </div>
+                    <div class="icon cloud hide clouds">
+                        <div class="cloud"></div>
+                        <div class="cloud"></div>
+                    </div>
+                    <div class="icon flurries hide snow">
+                        <div class="cloud"></div>
+                        <div class="snow">
+                            <div class="flake"></div>
+                            <div class="flake"></div>
+                        </div>
+                    </div>
+                    <div class="icon sunny hide clear">
+                        <div class="sun">
+                            <div clas="rays"></div>
+                        </div>
+                    </div>
+                    <div class="icon rainy hide rain">
+                        <div class="cloud"></div>
+                        <div class="rain"></div>
+                    </div>
+                </div>
+                <p class="text-center">Ibbad</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
